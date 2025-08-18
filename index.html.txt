@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Digital Profit Advisors | IA Aplicada a tu Negocio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Digital Profit Advisors" class="logo"/>
+            <h1>Transforma tu negocio con Inteligencia Artificial aplicada.</h1>
+            <p>Chatbots, automatización y certificación 4.0 para aumentar tus ganancias, optimizar operaciones y escalar tu atención al cliente.</p>
+            <a href="#contacto" class="btn-primary">Agenda tu diagnóstico gratuito</a>
+        </div>
+        <div class="whatsapp-float">
+            <a href="https://wa.me/50672727250" target="_blank" title="Chat con WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+            <ul class="nav-menu">
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="language-switch">
+                <a href="index-en.html" class="lang-en">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección: Quiénes Somos -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+            <p><strong>Digital Profit Advisors</strong> es una consultora estratégica en transformación digital con presencia en <strong>Costa Rica, Centroamérica, México y Miami</strong>.</p>
+            <p>Nos especializamos en aplicar <strong>Inteligencia Artificial</strong> a problemas reales de negocio: aumentar ventas, reducir costos y mejorar la experiencia del cliente.</p>
+            <p>Trabajamos con empresas que no solo quieren tecnología, sino <strong>resultados medibles</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Sección: Servicios -->
+    <section id="servicios" class="section" style="background: #0f0f0f;">
+        <div class="container">
+            <h2>Servicios Estratégicos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Customer Intelligence Automation</h3>
+                    <p>Chatbots con IA (Botmaker + GPT) que venden, califican leads y atienden 24/7 por WhatsApp, Instagram y web.</p>
+                    <p><strong>+67% en ventas</strong> por optimización de leads</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Presence Optimization</h3>
+                    <p>Gestión estratégica de redes sociales con contenido inteligente y respuestas automáticas.</p>
+                    <p><strong>+35% en ventas</strong> por redes sociales</p>
+                </div>
+                <div class="service-card">
+                    <h3>Operational Efficiency & Process Intelligence</h3>
+                    <p>Automatización con RPA, BPM y CRM para liberar recursos y reducir costos operativos.</p>
+                    <p><strong>-25% en costos</strong> operativos</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Transformation & 4.0 Certification</h3>
+                    <p>Diagnóstico, estrategia y certificación con estándar <strong>CERTIMIND.org</strong> para validar tu madurez digital.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI & Digital Skills Training</h3>
+                    <p>Capacitamos a tu equipo para que aprovechen al máximo las nuevas tecnologías.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Metodología -->
+    <section id="metodologia" class="section">
+        <div class="container">
+            <h2>Nuestra Metodología: AI-Driven Growth Path®</h2>
+            <div class="methodology-steps">
+                <div class="step"><strong>1. Diagnóstico</strong><br>Evaluamos tu madurez digital</div>
+                <div class="step"><strong>2. Estrategia</strong><br>Diseñamos tu hoja de ruta</div>
+                <div class="step"><strong>3. Implementación</strong><br>Automatizamos y capacitamos</div>
+                <div class="step"><strong>4. Medición</strong><br>Reportamos resultados reales</div>
+                <div class="step"><strong>5. Optimización</strong><br>Mejoramos continuamente</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Resultados -->
+    <section id="resultados" class="section" style="background: #1a0000; color: #fff;">
+        <div class="container">
+            <h2>Resultados Reales</h2>
+            <p>Empresas que han implementado nuestras soluciones reportan:</p>
+            <ul class="results-list">
+                <li>✅ <strong>+67%</strong> en ventas por chatbots con IA</li>
+                <li>✅ <strong>+35%</strong> en ventas por redes sociales</li>
+                <li>✅ <strong>-25%</strong> en costos operativos</li>
+                <li>✅ <strong>Atención 24/7</strong> sin equipo adicional</li>
+                <li>✅ <strong>Libertad</strong> para enfocarse en lo estratégico</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección: Tecnologías -->
+    <section id="tecnologias" class="section">
+        <div class="container">
+            <h2>Tecnologías que Dominamos</h2>
+            <p>Trabajamos con las plataformas líderes en automatización y experiencia del cliente:</p>
+            <div class="logos-tech">
+                <img src="assets/tecnologias/botmaker.png" alt="Botmaker">
+                <img src="assets/tecnologias/certimind.png" alt="CERTIMIND">
+                <img src="assets/tecnologias/whatsapp.png" alt="WhatsApp Business">
+                <img src="assets/tecnologias/gpt.png" alt="GPT">
+                <img src="assets/tecnologias/uipath.png" alt="UiPath">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contacto" class="section" style="background: #000; text-align: center; padding: 100px 20px;">
+        <div class="container">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Agenda tu diagnóstico gratuito de madurez digital e IA.</p>
+            <p><strong>Teléfono:</strong> +506 7272 7250</p>
+            <p><strong>Correo:</strong> <a href="mailto:digital.profit.llc@gmail.com">digital.profit.llc@gmail.com</a></p>
+            <a href="https://wa.me/50672727250" class="btn-primary" target="_blank">Escríbenos por WhatsApp</a>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
+                Atendemos en Costa Rica, Centroamérica, México y Miami.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #111; color: #777; text-align: center; padding: 20px;">
+        <p>&copy; 2025 Digital Profit Advisors. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+</html>

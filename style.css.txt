@@ -1,0 +1,495 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #000;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('../assets/banner.jpg') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 900px;
+    padding: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+    width: 320px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #ddd;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #E50000;
+    color: white;
+    padding: 16px 36px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background: #c00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 0, 0, 0.4);
+}
+
+/* WhatsApp Button Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #25D366;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.whatsapp-float a:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(229, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #E50000;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #E50000;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.language-switch {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.lang-en, .lang-es {
+    color: #E50000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lang-en:hover, .lang-es:hover {
+    color: #fff;
+}
+
+/* Secciones generales */
+.section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    color: #E50000;
+    font-weight: 700;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Servicios - Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(229, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(229, 0, 0, 0.1);
+    border: 1px solid rgba(229, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.service-card strong {
+    color: #E50000;
+}
+
+/* Metodología */
+.methodology-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.step {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid rgba(229, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    border-color: #E50000;
+    transform: scale(1.05);
+    background: #1a0000;
+}
+
+/* Resultados */
+.results-list {
+    text-align: left;
+    max-width: 700px;
+    margin: 40px auto 0;
+    list-style: none;
+}
+
+.results-list li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.results-list strong {
+    color: #E50000;
+}
+
+/* Tecnologías */
+.logos-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.logos-tech img {
+    max-width: 140px;
+    filter: grayscale(100%) brightness(1.2);
+    transition: all 0.3s ease;
+}
+
+.logos-tech img:hover {
+    filter: grayscale(0%) brightness(1.1);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .logo {
+        width: 240px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .section {
+        padding: 60px 20px;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .methodology-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: 240px;
+    }
+    .results-list li {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
+    .hero h1 { font-size: 3.2rem; }
+    .hero p { font-size: 1.4rem; }
+}
+
+/* WhatsApp Button Flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-float a:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 180px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #E50000;
+}
+
+.language-switch {
+    font-weight: 600;
+}
+
+.lang-en {
+    color: #E50000;
+    text-decoration: none;
+}
+
+/* Secciones generales */
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #E50000;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section {
+        padding: 60px 20px;
+    }
+}
