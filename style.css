@@ -32,7 +32,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75); /* Fondo oscuro para mejorar legibilidad */
+    background: rgba(0, 0, 0, 0.85); /* Más oscuro para mejor contraste */
     z-index: 1;
 }
 
@@ -58,36 +58,43 @@ body {
     z-index: 0;
 }
 
-/* Contenido del hero */
-.hero-content {
+/* Contenido centrado encima del video */
+.hero-content-centered {
+    position: relative;
     z-index: 2;
     max-width: 900px;
     padding: 30px;
+    margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
 }
 
-.hero-content .logo {
+.hero-content-centered .logo {
     width: 320px;
     margin-bottom: 25px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
-.hero-content h1 {
+.hero-content-centered h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     color: #fff;
     font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero-content p {
+.hero-content-centered p {
     font-size: 1.3rem;
     margin-bottom: 30px;
     color: #ddd;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
+/* Botón principal */
 .btn-primary {
     display: inline-block;
     background: #E50000;
@@ -107,7 +114,13 @@ body {
     box-shadow: 0 6px 20px rgba(229, 0, 0, 0.4);
 }
 
-/* WhatsApp Button Flotante */
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* WhatsApp flotante */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -371,18 +384,12 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Animación de entrada */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero-content-centered h1 {
         font-size: 2.2rem;
     }
-    .hero-content p {
+    .hero-content-centered p {
         font-size: 1.1rem;
     }
     .logo {
@@ -425,10 +432,11 @@ footer {
 
 /* Para pantallas grandes */
 @media (min-width: 1200px) {
-    .hero-content h1 {
+    .hero-content-centered h1 {
         font-size: 3.2rem;
     }
-    .hero-content p {
+    .hero-content-centered p {
         font-size: 1.4rem;
     }
 }
+
