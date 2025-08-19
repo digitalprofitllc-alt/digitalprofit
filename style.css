@@ -12,87 +12,6 @@ body {
     line-height: 1.7;
     scroll-behavior: smooth;
 }
-/* Navbar Compacto */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 99;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(229, 0, 0, 0.2);
-    height: 70px; /* Altura reducida */
-    display: flex;
-    align-items: center;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.nav-logo {
-    width: 150px; /* Reducido de 200px a 150px */
-    transition: transform 0.3s ease;
-}
-
-.nav-logo:hover {
-    transform: scale(1.05);
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #E50000;
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: #E50000;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-.language-switch {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.lang-en, .lang-es {
-    color: #E50000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.lang-en:hover, .lang-es:hover {
-    color: #fff;
-}
 
 /* Hero Section con Video */
 .hero-video-header {
@@ -104,7 +23,6 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 70px; /* Espacio para el navbar fijo */
 }
 
 /* Overlay sobre el video */
@@ -146,13 +64,8 @@ body {
     z-index: 2;
     max-width: 900px;
     padding: 30px;
+    margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
-}
-
-.hero-content-centered .logo {
-    width: 320px;
-    margin-bottom: 25px;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
 .hero-content-centered h1 {
@@ -161,7 +74,7 @@ body {
     color: #fff;
     font-weight: 700;
     line-height: 1.3;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero-content-centered p {
@@ -172,7 +85,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 
 /* Botón principal */
@@ -232,6 +145,108 @@ body {
 
 .whatsapp-float a:hover {
     transform: scale(1.1) rotate(10deg);
+}
+
+/* Navbar Compacto */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(229, 0, 0, 0.2);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-logo {
+    width: 150px; /* Logo más pequeño en el navbar */
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #E50000;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #E50000;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Acciones del navbar: EN y Contacto */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-en {
+    color: #E50000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.lang-en:hover {
+    color: #fff;
+}
+
+.btn-nav-contact {
+    background: #E50000;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-nav-contact:hover {
+    background: #c00;
+    transform: translateY(-2px);
 }
 
 /* Secciones generales */
@@ -298,4 +313,197 @@ body {
 
 /* Iconos en tarjetas */
 .service-card .icon {
+    font-size: 2.5rem;
+    color: #E50000;
+    margin-bottom: 15px;
+    background: rgba(229, 0, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
 
+/* Metodología - Camino visual */
+.methodology-path {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.step {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 140px;
+    border: 1px solid rgba(229, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    background: #1a0000;
+    transform: scale(1.05);
+    border-color: #E50000;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    background: #E50000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 10px;
+    font-size: 1.2rem;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #E50000;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Resultados - Cuadrícula impactante */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    background: rgba(229, 0, 0, 0.1);
+}
+
+.result-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+}
+
+.result-item strong {
+    color: #E50000;
+    font-size: 1.3rem;
+}
+
+/* Tecnologías */
+.logos-tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.logos-tech img {
+    max-width: 140px;
+    filter: grayscale(100%) brightness(1.2);
+    transition: all 0.3s ease;
+}
+
+.logos-tech img:hover {
+    filter: grayscale(0%) brightness(1.1);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content-centered h1 {
+        font-size: 2.2rem;
+    }
+    .hero-content-centered p {
+        font-size: 1.1rem;
+    }
+    .nav-logo {
+        width: 130px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .section {
+        padding: 60px 20px;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .methodology-path {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .arrow {
+        transform: rotate(90deg);
+    }
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float a {
+        width: 56px;
+        height: 56px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
+    .hero-content-centered h1 {
+        font-size: 3.2rem;
+    }
+    .hero-content-centered p {
+        font-size: 1.4rem;
+    }
+}
