@@ -10,15 +10,23 @@
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <img src="assets/logo.png" alt="Digital Profit Advisors" class="logo"/>
+    <!-- Hero Section with Video -->
+    <header class="hero-video-header">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop class="header-video" playsinline>
+            <source src="assets/videos/ciudad-digital.mp4" type="video/mp4">
+            <!-- Fallback if video doesn't load -->
+            <img src="assets/banner.jpg" alt="Digital Profit Advisors" class="hero-fallback">
+        </video>
+
+        <!-- Centered content over video -->
+        <div class="hero-content-centered">
             <h1>Transform your business with applied Artificial Intelligence.</h1>
             <p>Chatbots, automation, and Industry 4.0 certification to increase profits, optimize operations, and scale customer experience.</p>
             <a href="#contact" class="btn-primary">Schedule your free diagnosis</a>
         </div>
+
+        <!-- WhatsApp floating button -->
         <div class="whatsapp-float">
             <a href="https://wa.me/50672727250" target="_blank" title="Chat on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
@@ -36,10 +44,15 @@
                 <li><a href="#methodology">Methodology</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#technologies">Technologies</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="language-switch">
-                <a href="index.html" class="lang-es">ES</a>
+            <div class="nav-actions">
+                <!-- Red "Contact Us" button -->
+                <a href="#contact" class="btn-nav-contact">Contact Us</a>
+
+                <!-- Language switch with globe icon -->
+                <a href="index.html" class="lang-switch" title="Cambiar idioma">
+                    <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Language
+                </a>
             </div>
         </div>
     </nav>
@@ -60,25 +73,30 @@
             <h2>Strategic Services</h2>
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="icon"><i class="fas fa-robot"></i></div>
                     <h3>Customer Intelligence Automation</h3>
                     <p>AI-powered chatbots (Botmaker + GPT) that sell, qualify leads, and provide 24/7 support via WhatsApp, Instagram, and web.</p>
                     <p><strong>+67% in sales</strong> through lead optimization</p>
                 </div>
                 <div class="service-card">
+                    <div class="icon"><i class="fab fa-instagram"></i></div>
                     <h3>Digital Presence Optimization</h3>
                     <p>Strategic social media management with smart content and automated responses.</p>
                     <p><strong>+35% in sales</strong> from social media</p>
                 </div>
                 <div class="service-card">
+                    <div class="icon"><i class="fas fa-cogs"></i></div>
                     <h3>Operational Efficiency & Process Intelligence</h3>
-                    <p>Automation with RPA, BPM, and CRM to free up resources and reduce operational costs.</p>
+                    <p>Automation with <strong>Red Hat Ansible</strong>, BPM, and CRM to free up resources and reduce operational costs.</p>
                     <p><strong>-25% in costs</strong> through process optimization</p>
                 </div>
                 <div class="service-card">
+                    <div class="icon"><i class="fas fa-industry"></i></div>
                     <h3>Digital Transformation & 4.0 Certification</h3>
                     <p>Assessment, strategy, and certification with the <strong>CERTIMIND.org</strong> standard to validate your digital maturity.</p>
                 </div>
                 <div class="service-card">
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <h3>AI & Digital Skills Training</h3>
                     <p>We train your team to maximize the use of new technologies and drive digital adoption.</p>
                 </div>
@@ -90,12 +108,36 @@
     <section id="methodology" class="section">
         <div class="container">
             <h2>Our Methodology: AI-Driven Growth Path®</h2>
-            <div class="methodology-steps">
-                <div class="step"><strong>1. Diagnosis</strong><br>Evaluate your digital maturity</div>
-                <div class="step"><strong>2. Strategy</strong><br>Design your roadmap</div>
-                <div class="step"><strong>3. Implementation</strong><br>Automate and train</div>
-                <div class="step"><strong>4. Measurement</strong><br>Report real results</div>
-                <div class="step"><strong>5. Optimization</strong><br>Continuous improvement</div>
+            <div class="methodology-path">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Diagnosis</h3>
+                    <p>Evaluate your digital maturity</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Strategy</h3>
+                    <p>Design your roadmap</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Implementation</h3>
+                    <p>Automate and train</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3>Measurement</h3>
+                    <p>Report real results</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">5</div>
+                    <h3>Optimization</h3>
+                    <p>Continuous improvement</p>
+                </div>
             </div>
         </div>
     </section>
@@ -104,14 +146,29 @@
     <section id="results" class="section" style="background: #1a0000; color: #fff;">
         <div class="container">
             <h2>Real Results</h2>
-            <p>Companies that have implemented our solutions report:</p>
-            <ul class="results-list">
-                <li>✅ <strong>+67%</strong> in sales from AI chatbots</li>
-                <li>✅ <strong>+35%</strong> in sales from social media</li>
-                <li>✅ <strong>-25%</strong> in operational costs</li>
-                <li>✅ <strong>24/7 customer service</strong> without extra staff</li>
-                <li>✅ <strong>Freedom</strong> to focus on strategic tasks</li>
-            </ul>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Companies that have implemented our solutions report:</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>+67%</strong> in sales from AI chatbots
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>+35%</strong> in sales from social media
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>-25%</strong> in operational costs
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>24/7 customer service</strong> without extra staff
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>Freedom</strong> to focus on strategic tasks
+                </div>
+            </div>
         </div>
     </section>
 
@@ -125,7 +182,7 @@
                 <img src="assets/tecnologias/certimind.png" alt="CERTIMIND">
                 <img src="assets/tecnologias/whatsapp.png" alt="WhatsApp Business">
                 <img src="assets/tecnologias/gpt.png" alt="GPT">
-                <img src="assets/tecnologias/uipath.png" alt="UiPath">
+                <img src="assets/tecnologias/redhat.png" alt="Red Hat">
             </div>
         </div>
     </section>
@@ -148,6 +205,9 @@
     <footer style="background: #111; color: #777; text-align: center; padding: 20px;">
         <p>&copy; 2025 Digital Profit Advisors. All rights reserved.</p>
     </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>
