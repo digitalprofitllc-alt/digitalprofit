@@ -172,7 +172,7 @@ body {
 }
 
 .nav-logo {
-    width: 150px; /* Logo más pequeño en el navbar */
+    width: 150px;
     transition: transform 0.3s ease;
 }
 
@@ -214,39 +214,20 @@ body {
     width: 100%;
 }
 
-/* Acciones del navbar: EN y Contacto */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+/* Switch de idioma */
+.language-switch {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .lang-en {
     color: #E50000;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 .lang-en:hover {
     color: #fff;
-}
-
-.btn-nav-contact {
-    background: #E50000;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-nav-contact:hover {
-    background: #c00;
-    transform: translateY(-2px);
 }
 
 /* Secciones generales */
