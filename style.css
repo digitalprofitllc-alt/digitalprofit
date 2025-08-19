@@ -13,11 +13,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
-.hero {
+/* Hero Section con Video */
+.hero-video-header {
     position: relative;
     height: 100vh;
-    background: url('../assets/banner.jpg') no-repeat center center / cover;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,42 +25,61 @@ body {
     color: white;
 }
 
-.overlay {
+/* Overlay sobre el video */
+.video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.75); /* Fondo oscuro para mejorar legibilidad */
     z-index: 1;
 }
 
+/* Video de fondo */
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Imagen de respaldo si el video no carga */
+.hero-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Contenido del hero */
 .hero-content {
     z-index: 2;
     max-width: 900px;
     padding: 30px;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.logo {
+.hero-content .logo {
     width: 320px;
     margin-bottom: 25px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     color: #fff;
     font-weight: 700;
 }
 
-.hero p {
+.hero-content p {
     font-size: 1.3rem;
     margin-bottom: 30px;
     color: #ddd;
@@ -261,6 +280,21 @@ body {
     color: #E50000;
 }
 
+/* Iconos en tarjetas */
+.service-card .icon {
+    font-size: 2.5rem;
+    color: #E50000;
+    margin-bottom: 15px;
+    background: rgba(229, 0, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
 /* Metodología */
 .methodology-steps {
     display: flex;
@@ -337,12 +371,18 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero-content h1 {
         font-size: 2.2rem;
     }
-    .hero p {
+    .hero-content p {
         font-size: 1.1rem;
     }
     .logo {
@@ -372,124 +412,23 @@ footer {
     .results-list li {
         font-size: 1.1rem;
     }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float a {
+        width: 56px;
+        height: 56px;
+        font-size: 1.8rem;
+    }
 }
 
 /* Para pantallas grandes */
 @media (min-width: 1200px) {
-    .hero h1 { font-size: 3.2rem; }
-    .hero p { font-size: 1.4rem; }
-}
-
-/* WhatsApp Button Flotante */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-}
-
-.whatsapp-float a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    color: white;
-    font-size: 2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-.whatsapp-float a:hover {
-    transform: scale(1.1);
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 10;
-    backdrop-filter: blur(10px);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    width: 180px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #E50000;
-}
-
-.language-switch {
-    font-weight: 600;
-}
-
-.lang-en {
-    color: #E50000;
-    text-decoration: none;
-}
-
-/* Secciones generales */
-.section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #E50000;
-}
-
-.section p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero-content h1 {
+        font-size: 3.2rem;
     }
-    .hero p {
-        font-size: 1rem;
-    }
-    .nav-menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .section {
-        padding: 60px 20px;
+    .hero-content p {
+        font-size: 1.4rem;
     }
 }
