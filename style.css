@@ -12,7 +12,6 @@ body {
     line-height: 1.7;
     scroll-behavior: smooth;
 }
-
 /* Navbar Compacto */
 .navbar {
     position: fixed;
@@ -38,7 +37,7 @@ body {
 }
 
 .nav-logo {
-    width: 200px;
+    width: 150px; /* Reducido de 200px a 150px */
     transition: transform 0.3s ease;
 }
 
@@ -299,3 +298,4 @@ body {
 
 /* Iconos en tarjetas */
 .service-card .icon {
+
