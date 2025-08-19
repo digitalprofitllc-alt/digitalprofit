@@ -240,7 +240,7 @@ body {
     box-shadow: 0 4px 8px rgba(229, 0, 0, 0.4);
 }
 
-/* Switch de idioma con ícono */
+/* Switch de idioma con ícono de mundo */
 .lang-switch {
     display: flex;
     align-items: center;
@@ -429,6 +429,7 @@ body {
 .result-icon {
     font-size: 1.5rem;
     min-width: 40px;
+    color: #E50000;
 }
 
 .result-item strong {
