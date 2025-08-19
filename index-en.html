@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilos para el menú desplegable de idioma */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .lang-switch i {
+            color: #E50000;
+            font-size: 1.1rem;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #111;
+            min-width: 80px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 6px;
+            z-index: 100;
+            overflow: hidden;
+            top: 100%;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background: #E50000;
+        }
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,15 +65,11 @@
             <!-- Fallback if video doesn't load -->
             <img src="assets/banner.jpg" alt="Digital Profit Advisors" class="hero-fallback">
         </video>
-
-        <!-- Centered content over video -->
         <div class="hero-content-centered">
             <h1>Transform your business with applied Artificial Intelligence.</h1>
             <p>Chatbots, automation, and Industry 4.0 certification to increase profits, optimize operations, and scale customer experience.</p>
             <a href="#contact" class="btn-primary">Schedule your free diagnosis</a>
         </div>
-
-        <!-- WhatsApp floating button -->
         <div class="whatsapp-float">
             <a href="https://wa.me/50672727250" target="_blank" title="Chat on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
@@ -46,13 +89,16 @@
                 <li><a href="#technologies">Technologies</a></li>
             </ul>
             <div class="nav-actions">
-                <!-- Red "Contact Us" button -->
                 <a href="#contact" class="btn-nav-contact">Contact Us</a>
-
-                <!-- Language switch with globe icon -->
-                <a href="index.html" class="lang-switch" title="Cambiar idioma">
-                    <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> ES
-                </a>
+                <div class="language-dropdown">
+                    <a class="lang-switch">
+                        <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Language
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index.html">ES</a>
+                        <a href="index-pt.html">PT</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -211,4 +257,3 @@
 
 </body>
 </html>
-
