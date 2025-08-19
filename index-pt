@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Digital Profit Advisors | IA Aplicada ao Seu Negócio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
+    <style>
+        /* Estilos para o menu de idioma (dentro do HTML por segurança) */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .lang-switch i {
+            color: #E50000;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #111;
+            min-width: 80px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 6px;
+            z-index: 100;
+            overflow: hidden;
+            top: 100%;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: #E50000;
+        }
+
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section com Vídeo -->
+    <header class="hero-video-header">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop class="header-video" playsinline>
+            <source src="assets/videos/ciudad-digital.mp4" type="video/mp4">
+            <!-- Fallback se o vídeo não carregar -->
+            <img src="assets/banner.jpg" alt="Digital Profit Advisors" class="hero-fallback">
+        </video>
+
+        <!-- Conteúdo centralizado sobre o vídeo -->
+        <div class="hero-content-centered">
+            <h1>Transforme seu negócio com Inteligência Artificial aplicada.</h1>
+            <p>Chatbots, automação e certificação 4.0 para aumentar seus lucros, otimizar operações e escalar seu atendimento ao cliente.</p>
+            <a href="#contato" class="btn-primary">Agende seu diagnóstico gratuito</a>
+        </div>
+
+        <!-- Botão flutuante do WhatsApp -->
+        <div class="whatsapp-float">
+            <a href="https://wa.me/50672727250" target="_blank" title="Converse no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#metodologia">Metodologia</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- Botão vermelho "Contate-nos" -->
+                <a href="#contato" class="btn-nav-contact">Contate-nos</a>
+
+                <!-- Dropdown de idioma: PT ativo, opções ES e EN -->
+                <div class="language-dropdown">
+                    <a class="lang-switch">
+                        <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Idioma
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index.html">ES</a>
+                        <a href="index-en.html">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção: Sobre Nós -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p><strong>Digital Profit Advisors</strong> é uma consultoria estratégica em transformação digital com presença na <strong>Costa Rica, América Central, México e Miami</strong>.</p>
+            <p>Especializamo-nos em aplicar <strong>Inteligência Artificial</strong> a problemas reais de negócio: aumentar vendas, reduzir custos e melhorar a experiência do cliente.</p>
+            <p>Trabalhamos com empresas que não querem apenas tecnologia, mas <strong>resultados mensuráveis</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Seção: Serviços -->
+    <section id="servicos" class="section" style="background: #0f0f0f;">
+        <div class="container">
+            <h2>Serviços Estratégicos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automação da Inteligência do Cliente</h3>
+                    <p>Chatbots com IA (Botmaker + GPT) que vendem, qualificam leads e atendem 24/7 via WhatsApp, Instagram e web.</p>
+                    <p><strong>+67% em vendas</strong> pela otimização de leads</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fab fa-instagram"></i></div>
+                    <h3>Otimização da Presença Digital</h3>
+                    <p>Gestão estratégica de redes sociais com conteúdo inteligente e respostas automáticas.</p>
+                    <p><strong>+35% em vendas</strong> por redes sociais</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Eficiência Operacional & Inteligência de Processos</h3>
+                    <p>Automação com <strong>Red Hat Ansible</strong>, BPM e CRM para liberar recursos e reduzir custos operacionais.</p>
+                    <p><strong>-25% em custos</strong> operacionais</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-industry"></i></div>
+                    <h3>Transformação Digital & Certificação 4.0</h3>
+                    <p>Diagnóstico, estratégia e certificação com padrão <strong>CERTIMIND.org</strong> para validar sua maturidade digital.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Treinamento em IA & Habilidades Digitais</h3>
+                    <p>Capacitamos sua equipe para aproveitar ao máximo as novas tecnologias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Metodologia -->
+    <section id="metodologia" class="section">
+        <div class="container">
+            <h2>Nossa Metodologia: AI-Driven Growth Path®</h2>
+            <div class="methodology-path">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Avaliamos sua maturidade digital</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Estratégia</h3>
+                    <p>Desenhamos seu plano de ação</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Implementação</h3>
+                    <p>Automatizamos e capacitamos</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3>Mensuração</h3>
+                    <p>Relatamos resultados reais</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-icon">5</div>
+                    <h3>Otimização</h3>
+                    <p>Melhoramos continuamente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Resultados -->
+    <section id="resultados" class="section" style="background: #1a0000; color: #fff;">
+        <div class="container">
+            <h2>Resultados Reais</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Empresas que implementaram nossas soluções relatam:</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>+67%</strong> em vendas por chatbots com IA
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>+35%</strong> em vendas por redes sociais
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>-25%</strong> em custos operacionais
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>Atendimento 24/7</strong> sem equipe adicional
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">✅</div>
+                    <strong>Liberdade</strong> para focar no estratégico
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Tecnologias -->
+    <section id="tecnologias" class="section">
+        <div class="container">
+            <h2>Tecnologias que Dominamos</h2>
+            <p>Trabalhamos com as plataformas líderes em automação e experiência do cliente:</p>
+            <div class="logos-tech">
+                <img src="assets/tecnologias/botmaker.png" alt="Botmaker">
+                <img src="assets/tecnologias/certimind.png" alt="CERTIMIND">
+                <img src="assets/tecnologias/whatsapp.png" alt="WhatsApp Business">
+                <img src="assets/tecnologias/gpt.png" alt="GPT">
+                <img src="assets/tecnologias/redhat.png" alt="Red Hat">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Contato -->
+    <section id="contato" class="section" style="background: #000; text-align: center; padding: 100px 20px;">
+        <div class="container">
+            <h2>Pronto para transformar seu negócio?</h2>
+            <p>Agende seu diagnóstico gratuito de maturidade digital e IA.</p>
+            <p><strong>Telefone:</strong> +506 7272 7250</p>
+            <p><strong>E-mail:</strong> <a href="mailto:digital.profit.llc@gmail.com">digital.profit.llc@gmail.com</a></p>
+            <a href="https://wa.me/50672727250" class="btn-primary" target="_blank">Fale conosco no WhatsApp</a>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
+                Atendemos na Costa Rica, América Central, México e Miami.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #111; color: #777; text-align: center; padding: 20px;">
+        <p>&copy; 2025 Digital Profit Advisors. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
