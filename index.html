@@ -7,6 +7,52 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
+    <style>
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .lang-switch i {
+            color: #E50000;
+            font-size: 1.1rem;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #111;
+            min-width: 80px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 6px;
+            z-index: 100;
+            overflow: hidden;
+            top: 100%;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background: #E50000;
+        }
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,18 +61,13 @@
         <div class="video-overlay"></div>
         <video autoplay muted loop class="header-video" playsinline>
             <source src="assets/videos/ciudad-digital.mp4" type="video/mp4">
-            <!-- Fallback si el video no carga -->
             <img src="assets/banner.jpg" alt="Digital Profit Advisors" class="hero-fallback">
         </video>
-
-        <!-- Contenido centrado encima del video -->
         <div class="hero-content-centered">
             <h1>Transforma tu negocio con Inteligencia Artificial aplicada.</h1>
             <p>Chatbots, automatización y certificación 4.0 para aumentar tus ganancias, optimizar operaciones y escalar tu atención al cliente.</p>
             <a href="#contacto" class="btn-primary">Agenda tu diagnóstico gratuito</a>
         </div>
-
-        <!-- WhatsApp flotante -->
         <div class="whatsapp-float">
             <a href="https://wa.me/50672727250" target="_blank" title="Chat con WhatsApp">
                 <i class="fab fa-whatsapp"></i>
@@ -34,7 +75,7 @@
         </div>
     </header>
 
-    <!-- Navbar Compacto -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <img src="assets/logo.png" alt="Logo" class="nav-logo" />
@@ -46,13 +87,16 @@
                 <li><a href="#tecnologias">Tecnologías</a></li>
             </ul>
             <div class="nav-actions">
-                <!-- Botón rojo de Contáctenos -->
                 <a href="#contacto" class="btn-nav-contact">Contáctenos</a>
-
-                <!-- Idioma con ícono de mundo -->
-                <a href="index-en.html" class="lang-switch" title="Cambiar idioma">
-                    <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> EN
-                </a>
+                <div class="language-dropdown">
+                    <a class="lang-switch">
+                        <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Idioma
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index-en.html">EN</a>
+                        <a href="index-pt.html">PT</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -206,9 +250,6 @@
         <p>&copy; 2025 Digital Profit Advisors. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script -->
     <script src="script.js"></script>
-
 </body>
 </html>
-
