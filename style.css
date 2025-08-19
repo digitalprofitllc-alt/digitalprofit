@@ -214,20 +214,55 @@ body {
     width: 100%;
 }
 
-/* Switch de idioma */
-.language-switch {
-    font-weight: 600;
-    font-size: 1.1rem;
+/* Acciones del navbar: Contáctenos + Idioma */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.lang-en {
-    color: #E50000;
+/* Botón rojo de Contáctenos */
+.btn-nav-contact {
+    background: #E50000;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(229, 0, 0, 0.3);
+}
+
+.btn-nav-contact:hover {
+    background: #c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(229, 0, 0, 0.4);
+}
+
+/* Switch de idioma con ícono */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ccc;
+    font-size: 0.9rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.lang-en:hover {
+.lang-switch i {
+    color: #E50000;
+    font-size: 1.1rem;
+}
+
+.lang-switch:hover {
     color: #fff;
+}
+
+.lang-switch:hover i {
+    color: #fff;
+    transform: scale(1.1);
 }
 
 /* Secciones generales */
