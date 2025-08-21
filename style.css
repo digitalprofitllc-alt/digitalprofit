@@ -25,7 +25,6 @@ body {
     color: white;
 }
 
-/* Overlay sobre el video */
 .video-overlay {
     position: absolute;
     top: 0;
@@ -36,7 +35,6 @@ body {
     z-index: 1;
 }
 
-/* Video de fondo */
 .header-video {
     position: absolute;
     top: 0;
@@ -47,7 +45,6 @@ body {
     z-index: 0;
 }
 
-/* Imagen de respaldo si el video no carga */
 .hero-fallback {
     position: absolute;
     top: 0;
@@ -58,7 +55,6 @@ body {
     z-index: 0;
 }
 
-/* Contenido centrado encima del video */
 .hero-content-centered {
     position: relative;
     z-index: 2;
@@ -122,16 +118,10 @@ body {
     z-index: 100;
 }
 
-.whatsapp-float a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.whatsapp-logo {
     width: 64px;
     height: 64px;
-    background: #25D366;
     border-radius: 50%;
-    color: white;
-    font-size: 2rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
@@ -143,11 +133,11 @@ body {
     100% { transform: scale(1); }
 }
 
-.whatsapp-float a:hover {
+.whatsapp-logo:hover {
     transform: scale(1.1) rotate(10deg);
 }
 
-/* Navbar Compacto */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -214,14 +204,74 @@ body {
     width: 100%;
 }
 
-/* Acciones del navbar: Contáctenos + Idioma */
+/* Botón de menú hamburguesa */
+.menu-toggle {
+    display: none;
+    background: #E50000;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #c00;
+    transform: scale(1.05);
+}
+
+/* Menú móvil desplegable */
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-list li {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(229, 0, 0, 0.2);
+}
+
+.mobile-menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-list a:hover {
+    color: #E50000;
+}
+
+/* Acciones del navbar */
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Botón rojo de Contáctenos */
 .btn-nav-contact {
     background: #E50000;
     color: white;
@@ -231,16 +281,19 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(229, 0, 0, 0.3);
 }
 
 .btn-nav-contact:hover {
     background: #c00;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(229, 0, 0, 0.4);
 }
 
-/* Switch de idioma con ícono de mundo */
+/* Selector de idioma con ícono de mundo */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .lang-switch {
     display: flex;
     align-items: center;
@@ -248,21 +301,38 @@ body {
     color: #ccc;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-.lang-switch i {
-    color: #E50000;
-    font-size: 1.1rem;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #111;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    z-index: 100;
+    overflow: hidden;
+    top: 100%;
 }
 
-.lang-switch:hover {
-    color: #fff;
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background 0.3s ease;
 }
 
-.lang-switch:hover i {
-    color: #fff;
-    transform: scale(1.1);
+.dropdown-content a:hover {
+    background: #E50000;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Secciones generales */
@@ -480,10 +550,14 @@ footer {
     .nav-logo {
         width: 130px;
     }
+    .menu-toggle {
+        display: block;
+    }
     .nav-menu {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        display: none;
+    }
+    .nav-actions {
+        display: none;
     }
     .section {
         padding: 60px 20px;
@@ -508,10 +582,9 @@ footer {
         bottom: 20px;
         right: 20px;
     }
-    .whatsapp-float a {
+    .whatsapp-logo {
         width: 56px;
         height: 56px;
-        font-size: 1.8rem;
     }
 }
 
