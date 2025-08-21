@@ -4,55 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Digital Profit Advisors | IA Aplicada a tu Negocio</title>
+    <meta name="description" content="Transforma tu negocio con chatbots, inteligencia artificial, automatización y certificación 4.0. Aumenta tus ganancias, optimiza operaciones y escala tu atención al cliente. Agenda tu diagnóstico gratuito hoy.">
+    <meta name="keywords" content="chatbots, inteligencia artificial, IA aplicada, automatización de procesos, mejora de procesos, eficiencia operativa, sitios web con IA, certificación 4.0, digital transformation, transformación digital, Botmaker, GPT, Red Hat, CERTIMIND, WhatsApp Business, chatbot con IA, chatbot para ventas, chatbot para atención al cliente, automatización de tareas, procesos digitales, consultoría digital, Costa Rica, México, Miami">
+    <meta name="author" content="Digital Profit Advisors">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://digitalprofitllc-alt.github.io/digitalprofit/">
+    <link rel="icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
-    <style>
-        .language-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .lang-switch {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #ccc;
-            font-size: 0.9rem;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .lang-switch i {
-            color: #E50000;
-            font-size: 1.1rem;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background: #111;
-            min-width: 80px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            border-radius: 6px;
-            z-index: 100;
-            overflow: hidden;
-            top: 100%;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.9rem;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-        .dropdown-content a:hover {
-            background: #E50000;
-        }
-        .language-dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
 </head>
 <body>
 
@@ -70,15 +30,23 @@
         </div>
         <div class="whatsapp-float">
             <a href="https://wa.me/50672727250" target="_blank" title="Chat con WhatsApp">
-                <i class="fab fa-whatsapp"></i>
+                <img src="assets/tecnologias/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo">
             </a>
         </div>
     </header>
 
-    <!-- Navbar -->
+    <!-- Navbar con menú hamburguesa -->
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo -->
             <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menú principal (visible en desktop) -->
             <ul class="nav-menu">
                 <li><a href="#nosotros">Quiénes Somos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -86,6 +54,8 @@
                 <li><a href="#resultados">Resultados</a></li>
                 <li><a href="#tecnologias">Tecnologías</a></li>
             </ul>
+
+            <!-- Acciones: Contáctenos + Idioma -->
             <div class="nav-actions">
                 <a href="#contacto" class="btn-nav-contact">Contáctenos</a>
                 <div class="language-dropdown">
@@ -98,6 +68,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Menú móvil desplegable -->
+        <div class="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contáctenos</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -231,6 +213,15 @@
         </div>
     </section>
 
+    <!-- Botón de demostración -->
+    <section id="demo" class="section" style="background: #000; text-align: center; padding: 60px 20px;">
+        <div class="container">
+            <h2 style="color: #E50000; font-size: 1.8rem;">¿Estás listo para agendar una demostración?</h2>
+            <p style="color: #ddd; margin-bottom: 30px;">Descubre cómo podemos transformar tu negocio con IA aplicada.</p>
+            <a href="https://wa.me/50672727250" class="btn-primary" target="_blank">Agenda tu demo gratis</a>
+        </div>
+    </section>
+
     <!-- Sección: Contacto -->
     <section id="contacto" class="section" style="background: #000; text-align: center; padding: 100px 20px;">
         <div class="container">
@@ -250,6 +241,27 @@
         <p>&copy; 2025 Digital Profit Advisors. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-menu-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>
