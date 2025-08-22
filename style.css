@@ -73,14 +73,11 @@ body {
     text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
-.hero-content-centered p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+.hero-subtitle {
+    font-size: 1.5rem;
     color: #ddd;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 
@@ -102,6 +99,13 @@ body {
     background: #c00;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(229, 0, 0, 0.4);
+}
+
+/* Botón grande para demostración */
+.btn-large {
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    margin-top: 20px;
 }
 
 /* Animación de entrada */
@@ -544,8 +548,8 @@ footer {
     .hero-content-centered h1 {
         font-size: 2.2rem;
     }
-    .hero-content-centered p {
-        font-size: 1.1rem;
+    .hero-subtitle {
+        font-size: 1.3rem;
     }
     .nav-logo {
         width: 130px;
