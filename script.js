@@ -1,59 +1,74 @@
 // script.js
 
-// Menú Responsive (Hamburguesa)
-document.addEventListener("DOMContentLoaded", function () {
-    const navMenu = document.querySelector(".nav-menu");
-    const menuItems = document.querySelectorAll(".nav-menu a");
+// === 1. Menú Hamburguesa (Mobile Menu) ===
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-    // Añadir evento de clic a cada enlace para cerrar el menú en móvil
-    menuItems.forEach(link => {
-        link.addEventListener("click", () => {
-            if (window.innerWidth <= 768) {
-                navMenu.style.display = "none";
-            }
+// Verificar que los elementos existan antes de añadir eventos
+if (menuToggle && mobileMenu) {
+    // Alternar el menú al hacer clic en el botón hamburguesa
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que el evento cierre el menú inmediatamente
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace dentro del menú móvil
+    document.querySelectorAll('.mobile-menu-list a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
         });
     });
 
-    // Opcional: Si agregas un botón de hamburguesa en el futuro, este código lo maneja
-    // Por ahora, el menú es fijo, pero este script prepara el terreno
-});
+    // Cerrar el menú si se hace clic fuera del menú o del botón
+    window.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
 
-// Scroll Suave al hacer clic en enlaces de anclaje
+    // Cerrar el menú si se hace scroll (mejora UX en móvil)
+    window.addEventListener('scroll', () => {
+        mobileMenu.classList.remove('active');
+    });
+}
+
+// === 2. Scroll Suave a Secciones ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href");
-        if (targetId === "#") return;
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        
+        // Evitar comportamiento predeterminado solo si el enlace es una sección interna
+        if (targetId !== '#' && targetId !== '#contacto' && targetId !== '#demo') {
+            e.preventDefault();
+        }
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Ajuste por el menú fijo
-                behavior: "smooth"
+                top: targetElement.offsetTop - 80, // Ajuste por el navbar fijo
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Animación al hacer scroll (opcional: aparecer secciones con fadeIn)
-const sections = document.querySelectorAll(".section");
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -100px 0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
+// === 3. Efecto en el Navbar al hacer Scroll ===
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+        } else {
+            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.boxShadow = 'none';
         }
-    });
-}, observerOptions);
+    }
+});
 
-sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = "translateY(20px)";
-    section.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-    observer.observe(section);
+// === 4. (Opcional) Asegurar que el menú móvil se cierre al cargar ===
+document.addEventListener('DOMContentLoaded', () => {
+    if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+    }
 });
