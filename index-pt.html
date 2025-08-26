@@ -3,63 +3,40 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Digital Profit Advisors | IA Aplicada ao Seu Negócio</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Digital Profit Advisors | IA Aplicada ao seu Negócio</title>
+
+    <!-- SEO Otimizado -->
+    <meta name="description" content="A Digital Profit Advisors impulsiona a transformação digital com chatbots de IA, automação e certificação 4.0. Aumente vendas, reduza custos e escalonar seu atendimento ao cliente na Costa Rica, México, América Central e Miami.">
+    <meta name="keywords" content="chatbots com IA, inteligência artificial aplicada, automação de processos, melhoria de processos, eficiência operacional, certificação 4.0, transformação digital, Botmaker, GPT, WhatsApp Business, chatbot para vendas, atendimento 24/7, automação com IA, estratégia digital, consultoria digital, Costa Rica, México, América Central, Miami, crescimento orientado por IA">
+    <meta name="author" content="Digital Profit Advisors">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://digitalprofitllc-alt.github.io/digitalprofit/index-pt.html">
+    <link rel="alternate" hreflang="pt" href="https://digitalprofitllc-alt.github.io/digitalprofit/index-pt.html" />
+    <link rel="alternate" hreflang="es" href="https://digitalprofitllc-alt.github.io/digitalprofit/index.html" />
+    <link rel="alternate" hreflang="en" href="https://digitalprofitllc-alt.github.io/digitalprofit/index-en.html" />
+
+    <!-- Open Graph (para redes sociais) -->
+    <meta property="og:title" content="Digital Profit Advisors | IA Aplicada ao seu Negócio">
+    <meta property="og:description" content="Transforme seu negócio com chatbots, automação e certificação 4.0. Aumente seus lucros e otimize operações.">
+    <meta property="og:image" content="https://digitalprofitllc-alt.github.io/digitalprofit/assets/banner.jpg">
+    <meta property="og:url" content="https://digitalprofitllc-alt.github.io/digitalprofit/index-pt.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Digital Profit Advisors | IA Aplicada ao seu Negócio">
+    <meta name="twitter:description" content="Chatbots, automação e certificação 4.0 para aumentar seus lucros e escalar seu atendimento ao cliente.">
+    <meta name="twitter:image" content="https://digitalprofitllc-alt.github.io/digitalprofit/assets/banner.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.png">
+
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/887e5c8c7d.js" crossorigin="anonymous"></script>
-    <style>
-        /* Estilos para o menu de idioma (dentro do HTML por segurança) */
-        .language-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .lang-switch {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #ccc;
-            font-size: 0.9rem;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .lang-switch i {
-            color: #E50000;
-            font-size: 1.1rem;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background: #111;
-            min-width: 80px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            border-radius: 6px;
-            z-index: 100;
-            overflow: hidden;
-            top: 100%;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.9rem;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background: #E50000;
-        }
-
-        .language-dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
 </head>
 <body>
 
@@ -68,29 +45,32 @@
         <div class="video-overlay"></div>
         <video autoplay muted loop class="header-video" playsinline>
             <source src="assets/videos/ciudad-digital.mp4" type="video/mp4">
-            <!-- Fallback se o vídeo não carregar -->
             <img src="assets/banner.jpg" alt="Digital Profit Advisors" class="hero-fallback">
         </video>
-
-        <!-- Conteúdo centralizado sobre o vídeo -->
         <div class="hero-content-centered">
             <h1>Transforme seu negócio com Inteligência Artificial aplicada.</h1>
-            <p>Chatbots, automação e certificação 4.0 para aumentar seus lucros, otimizar operações e escalar seu atendimento ao cliente.</p>
+            <p class="hero-subtitle">Chatbots que vendem, automação que reduz custos e certificação 4.0 para escalar sua operação.</p>
             <a href="#contato" class="btn-primary">Agende seu diagnóstico gratuito</a>
         </div>
-
-        <!-- Botão flutuante do WhatsApp -->
         <div class="whatsapp-float">
-            <a href="https://wa.me/50672727250" target="_blank" title="Converse no WhatsApp">
-                <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/50672727250" target="_blank" title="Converse pelo WhatsApp">
+                <img src="assets/tecnologias/whatsapp.png" alt="WhatsApp" class="whatsapp-logo">
             </a>
         </div>
     </header>
 
-    <!-- Menu de Navegação -->
+    <!-- Navbar com menu hambúrguer -->
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo -->
             <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+
+            <!-- Botão de menu hambúrguer -->
+            <button class="menu-toggle" aria-label="Alternar menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Menu principal (visível em desktop) -->
             <ul class="nav-menu">
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
@@ -98,11 +78,10 @@
                 <li><a href="#resultados">Resultados</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
             </ul>
-            <div class="nav-actions">
-                <!-- Botão vermelho "Contate-nos" -->
-                <a href="#contato" class="btn-nav-contact">Contate-nos</a>
 
-                <!-- Dropdown de idioma: PT ativo, opções ES e EN -->
+            <!-- Ações: Contato + Idioma -->
+            <div class="nav-actions">
+                <a href="#contato" class="btn-nav-contact">Fale Conosco</a>
                 <div class="language-dropdown">
                     <a class="lang-switch">
                         <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Idioma
@@ -114,13 +93,25 @@
                 </div>
             </div>
         </div>
+
+        <!-- Menu móvel -->
+        <div class="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#metodologia">Metodologia</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Seção: Sobre Nós -->
     <section id="sobre" class="section">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p><strong>Digital Profit Advisors</strong> é uma consultoria estratégica em transformação digital com presença na <strong>Costa Rica, América Central, México e Miami</strong>.</p>
+            <p><strong>Digital Profit Advisors</strong> é uma consultoria estratégica em transformação digital com presença na <strong>Costa Rica, México, América Central e Miami</strong>.</p>
             <p>Especializamo-nos em aplicar <strong>Inteligência Artificial</strong> a problemas reais de negócio: aumentar vendas, reduzir custos e melhorar a experiência do cliente.</p>
             <p>Trabalhamos com empresas que não querem apenas tecnologia, mas <strong>resultados mensuráveis</strong>.</p>
         </div>
@@ -134,7 +125,7 @@
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-robot"></i></div>
                     <h3>Automação da Inteligência do Cliente</h3>
-                    <p>Chatbots com IA (Botmaker + GPT) que vendem, qualificam leads e atendem 24/7 via WhatsApp, Instagram e web.</p>
+                    <p>Chatbots com IA (Botmaker + GPT) que vendem, qualificam leads e atendem 24/7 via WhatsApp, Facebook, Instagram e site.</p>
                     <p><strong>+67% em vendas</strong> pela otimização de leads</p>
                 </div>
                 <div class="service-card">
@@ -151,13 +142,13 @@
                 </div>
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-industry"></i></div>
-                    <h3>Transformação Digital & Certificação 4.0</h3>
-                    <p>Diagnóstico, estratégia e certificação com padrão <strong>CERTIMIND.org</strong> para validar sua maturidade digital.</p>
+                    <h3>Transformação Digital & IA</h3>
+                    <p>Diagnóstico, estratégia e análise para validar sua maturidade digital.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3>Treinamento em IA & Habilidades Digitais</h3>
-                    <p>Capacitamos sua equipe para aproveitar ao máximo as novas tecnologias.</p>
+                    <h3>Certificação & Treinamento em Habilidades Digitais</h3>
+                    <p>Capacitamos sua equipe para aproveitar ao máximo as novas tecnologias, incluindo certificações da indústria 4.0.</p>
                 </div>
             </div>
         </div>
@@ -231,11 +222,22 @@
         </div>
     </section>
 
+    <!-- Seção: Veja em ação -->
+    <section id="demo-cta" class="section" style="background: #111; padding: 80px 20px;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #E50000; font-size: 2.5rem; margin-bottom: 20px;">Veja em ação:</h2>
+            <p style="font-size: 1.2rem; color: #ddd; max-width: 800px; margin: 0 auto 30px;">
+                Experimente o futuro da transformação digital com IA aplicada agora. Agende uma demonstração personalizada para descobrir como ajudaremos a prevenir perdas, aumentar vendas, reduzir custos operacionais e alinhar sua estratégia digital com seus objetivos empresariais.
+            </p>
+            <a href="https://wa.me/50672727250" class="btn-primary btn-large" target="_blank">Reserve sua demonstração ao vivo</a>
+        </div>
+    </section>
+
     <!-- Seção: Tecnologias -->
     <section id="tecnologias" class="section">
         <div class="container">
-            <h2>Tecnologias que Dominamos</h2>
-            <p>Trabalhamos com as plataformas líderes em automação e experiência do cliente:</p>
+            <h2>Plataformas que dominamos</h2>
+            <p>Trabalhamos com as tecnologias líderes em automação, IA e experiência do cliente:</p>
             <div class="logos-tech">
                 <img src="assets/tecnologias/botmaker.png" alt="Botmaker">
                 <img src="assets/tecnologias/certimind.png" alt="CERTIMIND">
@@ -243,6 +245,9 @@
                 <img src="assets/tecnologias/gpt.png" alt="GPT">
                 <img src="assets/tecnologias/redhat.png" alt="Red Hat">
             </div>
+            <p style="margin-top: 30px; color: #ccc; font-size: 1.1rem;">
+                Integração com IA generativa, automação de processos e certificação 4.0.
+            </p>
         </div>
     </section>
 
@@ -253,20 +258,20 @@
             <p>Agende seu diagnóstico gratuito de maturidade digital e IA.</p>
             <p><strong>Telefone:</strong> +506 7272 7250</p>
             <p><strong>E-mail:</strong> <a href="mailto:digital.profit.llc@gmail.com">digital.profit.llc@gmail.com</a></p>
-            <a href="https://wa.me/50672727250" class="btn-primary" target="_blank">Fale conosco no WhatsApp</a>
+            <a href="https://wa.me/50672727250" class="btn-primary" target="_blank">Fale conosco pelo WhatsApp</a>
             <p style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
-                Atendemos na Costa Rica, América Central, México e Miami.
+                <strong>Digital Profit Advisors:</strong> Seu parceiro estratégico em transformação digital com IA.
             </p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer style="background: #111; color: #777; text-align: center; padding: 20px;">
         <p>&copy; 2025 Digital Profit Advisors. Todos os direitos reservados.</p>
+        <a href="privacy.html" style="color: #ccc; text-decoration: underline; font-size: 0.9rem;">Política de Privacidade</a>
     </footer>
 
     <!-- Script -->
     <script src="script.js"></script>
-
 </body>
 </html>
