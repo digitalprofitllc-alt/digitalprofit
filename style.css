@@ -306,6 +306,9 @@ body {
     font-size: 0.9rem;
     text-decoration: none;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
 }
 
 .dropdown-content {
@@ -313,7 +316,7 @@ body {
     position: absolute;
     right: 0;
     background: #111;
-    min-width: 120px;
+    min-width: 160px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     border-radius: 6px;
     z-index: 100;
@@ -323,11 +326,11 @@ body {
 
 .dropdown-content a {
     color: white;
-    padding: 8px 12px;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 0.95rem;
+    text-align: left;
     transition: background 0.3s ease;
 }
 
@@ -335,8 +338,9 @@ body {
     background: #E50000;
 }
 
-.language-dropdown:hover .dropdown-content {
-    display: block;
+.language-dropdown:hover .dropdown-content,
+.dropdown-content[style*="block"] {
+    display: block !important;
 }
 
 /* Secciones generales */
@@ -533,6 +537,23 @@ body {
     transform: scale(1.1);
 }
 
+/* Testimonio */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-card p {
+    margin: 15px 0;
+    color: #ddd;
+    line-height: 1.7;
+}
+
 /* Sección: Véalo en acción */
 #demo-cta {
     background: #111;
@@ -544,7 +565,7 @@ body {
 #demo-cta h2 {
     color: #E50000;
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.3;
 }
@@ -622,6 +643,14 @@ footer {
     .whatsapp-logo {
         width: 56px;
         height: 56px;
+    }
+    /* Estilo para el idioma en móvil */
+    .mobile-lang-item {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid rgba(229, 0, 0, 0.2);
+        font-size: 0.9rem;
+        color: #ccc;
     }
 }
 
