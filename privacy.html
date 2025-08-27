@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Política de Privacidad | Digital Profit Advisors</title>
     <style>
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             color: #fff;
@@ -14,47 +20,162 @@
             max-width: 900px;
             margin: 0 auto;
         }
+
+        /* Navbar estilo Digital Profit */
+        .privacy-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(229, 0, 0, 0.3);
+            margin-bottom: 40px;
+        }
+        .privacy-logo {
+            width: 140px;
+        }
+        .privacy-nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .privacy-nav-actions a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 15px;
+        }
+        .privacy-nav-actions .btn-contact {
+            background: #E50000;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .privacy-nav-actions .btn-contact:hover {
+            background: #c00;
+            transform: translateY(-2px);
+        }
+
+        /* Selector de idioma */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #111;
+            min-width: 120px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 6px;
+            z-index: 100;
+            overflow: hidden;
+            top: 100%;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background: #E50000;
+        }
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Títulos y texto */
         h1, h2 {
             color: #E50000;
+            margin: 30px 0 15px;
         }
-        a {
-            color: #E50000;
-            text-decoration: none;
+        p, ul {
+            margin-bottom: 15px;
+            color: #ddd;
+            font-size: 1rem;
         }
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Footer */
         footer {
             margin-top: 60px;
             text-align: center;
             font-size: 0.9rem;
             color: #777;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        footer a {
+            color: #E50000;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar en la página de privacidad -->
+    <nav class="privacy-navbar">
+        <a href="index.html">
+            <img src="assets/logo.png" alt="Digital Profit Advisors" class="privacy-logo">
+        </a>
+        <div class="privacy-nav-actions">
+            <a href="index.html#contacto" class="btn-contact">Contáctenos</a>
+            <div class="language-dropdown">
+                <a class="lang-switch">
+                    <span style="font-size: 1.2rem; margin-right: 5px;">🌎</span> Idioma
+                </a>
+                <div class="dropdown-content">
+                    <a href="index.html">ES</a>
+                    <a href="index-en.html">EN</a>
+                    <a href="index-pt.html">PT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la política de privacidad -->
     <h1>Política de Privacidad</h1>
     <p><strong>Última actualización:</strong> Junio 2025</p>
 
     <p>En <strong>Digital Profit Advisors</strong>, respetamos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política explica cómo recopilamos, usamos y protegemos la información que nos proporcionas al contactarnos o utilizar nuestros servicios.</p>
 
     <h2>1. Información que recopilamos</h2>
-    <p>Puede incluir:</p>
+    <p>Recopilamos datos cuando nos contactas por WhatsApp, correo, formulario o durante una demostración. Puede incluir:</p>
     <ul>
-        <li>Nombre, correo electrónico y número de teléfono (cuando nos contactas por WhatsApp, formulario o correo)</li>
-        <li>Información sobre tu negocio (sector, tamaño, necesidades de transformación digital)</li>
-        <li>Datos de uso de este sitio web (páginas visitadas, duración, origen del tráfico)</li>
+        <li>Nombre, correo electrónico, número de teléfono y cargo</li>
+        <li>Información sobre tu negocio: sector, tamaño, necesidades de transformación digital</li>
+        <li>Datos de uso del sitio web (páginas visitadas, duración, origen del tráfico)</li>
     </ul>
 
     <h2>2. Cómo usamos tu información</h2>
     <p>Utilizamos tus datos para:</p>
     <ul>
-        <li>Responder a tus consultas y brindarte una propuesta personalizada</li>
-        <li>Agendar diagnósticos gratuitos de madurez digital e IA</li>
+        <li>Responder a tus consultas y agendar diagnósticos gratuitos</li>
+        <li>Brindarte propuestas personalizadas de IA aplicada</li>
         <li>Mejorar nuestros servicios y la experiencia del cliente</li>
         <li>Enviar información relevante sobre transformación digital (solo si das tu consentimiento)</li>
     </ul>
 
     <h2>3. Seguridad de tus datos</h2>
-    <p>Implementamos medidas técnicas y organizativas para proteger tu información contra acceso no autorizado, pérdida o alteración. Trabajamos con plataformas seguras como WhatsApp Business, GPT y CRM con cifrado de extremo a extremo.</p>
+    <p>Implementamos medidas técnicas y organizativas para proteger tu información contra acceso no autorizado, pérdida o alteración. Trabajamos con plataformas seguras como WhatsApp Business, GPT, CRM y Red Hat Ansible, todas con cifrado de extremo a extremo.</p>
 
     <h2>4. Compartimos tu información?</h2>
     <p><strong>No vendemos ni compartimos tus datos con terceros</strong>. Solo los usamos internamente para atenderte y mejorar nuestros servicios. En caso de trabajar con aliados tecnológicos (como Botmaker o CERTIMIND), el intercambio de datos se realiza bajo acuerdos de confidencialidad.</p>
@@ -73,7 +194,7 @@
     <p>Puedes ejercer estos derechos enviando un correo a: <a href="mailto:digital.profit.llc@gmail.com">digital.profit.llc@gmail.com</a></p>
 
     <h2>7. Cambios en esta política</h2>
-    <p>Podemos actualizar esta política en cualquier momento. Todo cambio será publicado en este sitio. </p>
+    <p>Podemos actualizar esta política en cualquier momento. Cualquier cambio será publicado aquí.</p>
 
     <h2>8. Contacto</h2>
     <p>Si tienes preguntas sobre esta política, escríbenos a:</p>
@@ -81,7 +202,8 @@
     <strong>Teléfono:</strong> +506 7272 7250</p>
 
     <footer>
-        &copy; 2025 Digital Profit Advisors. Todos los derechos reservados. | <a href="index.html">← Volver al sitio</a>
+        &copy; 2025 Digital Profit Advisors. Todos los derechos reservados. | 
+        <a href="index.html">← Volver al sitio</a>
     </footer>
 
 </body>
