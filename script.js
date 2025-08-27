@@ -32,13 +32,33 @@ if (menuToggle && mobileMenu) {
     });
 }
 
-// === 2. Scroll Suave a Secciones ===
+// === 2. Selector de Idioma (funcional en móvil y desktop) ===
+function toggleLangMenu(e) {
+    e.preventDefault();
+    const dropdown = document.getElementById('langDropdown');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+}
+
+// Cierra el menú de idioma si se hace clic fuera
+window.addEventListener('click', (e) => {
+    const langDropdown = document.getElementById('langDropdown');
+    const langSwitch = document.querySelector('.lang-switch');
+    if (langDropdown && langSwitch && !langSwitch.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.style.display = 'none';
+    }
+});
+
+// === 3. Scroll Suave a Secciones ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         
         // Evitar comportamiento predeterminado solo si el enlace es una sección interna
-        if (targetId !== '#' && targetId !== '#contacto' && targetId !== '#demo') {
+        if (targetId !== '#' && targetId !== '#contacto' && targetId !== '#demo-cta') {
             e.preventDefault();
         }
 
@@ -52,7 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// === 3. Efecto en el Navbar al hacer Scroll ===
+// === 4. Efecto en el Navbar al hacer Scroll ===
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -66,7 +86,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// === 4. (Opcional) Asegurar que el menú móvil se cierre al cargar ===
+// === 5. Asegurar que el menú móvil se cierre al cargar ===
 document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenu) {
         mobileMenu.classList.remove('active');
